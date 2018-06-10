@@ -19,7 +19,7 @@ public class CloudActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent back = new Intent(CloudActivity.this, MainActivity.class);
+                Intent back = new Intent(CloudActivity.this, OptionActivity.class);
                 startActivity(back);
             }
         });

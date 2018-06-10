@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import java.sql.Time;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -15,52 +18,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button ml = findViewById(R.id.ml);
-        Button android= findViewById(R.id.android);
-        Button cloud = findViewById(R.id.cloud);
-        Button iot = findViewById(R.id.iot);
+        final Button login = findViewById(R.id.login);
+        login.setOnClickListener(this);
 
-        Button share = findViewById(R.id.share);
-
-        ml.setOnClickListener(this);
-        android.setOnClickListener(this);
-        cloud.setOnClickListener(this);
-        iot.setOnClickListener(this);
-        share.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         int id = v.getId();
         EditText name = findViewById(R.id.userName);
+        EditText password = findViewById(R.id.password);
         String userName = name.getText().toString();
+        String pass = password.getText().toString();
         switch (id){
-            case R.id.ml:
-                Intent ml = new Intent(MainActivity.this, MLActivity.class);
-                ml.putExtra("name", userName);
-                startActivity(ml);
+            case R.id.login:
+                if(userName == "omkar" && pass == "omkar"){
+                    Intent loginIntent = new Intent(MainActivity.this, OptionActivity.class);
+                    loginIntent.putExtra("name", userName);
+                    startActivity(loginIntent);
+                }
                 break;
-            case R.id.android:
-                Intent android = new Intent(MainActivity.this, AndroidActivity.class);
-                android.putExtra("name", userName);
-                startActivity(android);
-                break;
-            case R.id.cloud:
-                Intent cloud = new Intent(MainActivity.this, CloudActivity.class);
-                cloud.putExtra("name", userName);
-                startActivity(cloud);
-                break;
-            case R.id.iot:
-                Intent iot = new Intent(MainActivity.this, IOTActivity.class);
-                iot.putExtra("name", userName);
-                startActivity(iot);
-                break;
-            case R.id.share:
-                Intent sendIntent = new Intent();
-                sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "I scores 10 marks in android quiz...");
-                sendIntent.setType("text/plain");
-                startActivity(sendIntent);
         }
     }
 }

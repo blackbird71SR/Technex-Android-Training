@@ -19,7 +19,7 @@ public class MLActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent back = new Intent(MLActivity.this, MainActivity.class);
+                Intent back = new Intent(MLActivity.this, OptionActivity.class);
                 startActivity(back);
             }
         });

@@ -6,111 +6,46 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="2"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#000000">
 
-    <LinearLayout
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:text="Login to play Quiz"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:layout_marginTop="30dp"
+        android:textColor="#ffffff"/>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/userName"
-            android:hint="Enter your name"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="1"
-        android:weightSum="2">
-
-        <Button
-            android:id="@+id/ml"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:text="ML"
-            android:background="#ff0000"
-            android:textSize="50sp"
-            android:layout_weight="1"
-            tools:layout_editor_absoluteX="154dp"
-            tools:layout_editor_absoluteY="323dp" />
-
-        <Button
-            android:id="@+id/android"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:text="Android"
-            android:background="#00ff00"
-            android:textSize="30sp"
-            android:layout_weight="1"
-            tools:layout_editor_absoluteX="154dp"
-            tools:layout_editor_absoluteY="323dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="1"
-        android:weightSum="2">
-
-        <Button
-            android:id="@+id/cloud"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:text="Cloud Computing"
-            android:textSize="20sp"
-            android:background="#0000ff"
-            android:layout_weight="1"
-            tools:layout_editor_absoluteX="154dp"
-            tools:layout_editor_absoluteY="323dp" />
-
-        <Button
-            android:id="@+id/iot"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:text="IOT"
-            android:textSize="50sp"
-            android:background="#ffff00"
-            android:layout_weight="1"
-            tools:layout_editor_absoluteX="154dp"
-            tools:layout_editor_absoluteY="323dp" />
-
-    </LinearLayout>
-    <LinearLayout
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2">
+        android:id="@+id/userName"
+        android:layout_marginTop="30dp"
+        android:textColorHint="#ffffff"
+        android:hint="Enter username"
+        android:textColor="#ffffff"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Share the result..."
-            android:textSize="30sp"
-            android:layout_weight="2"
-            android:textColor="#ffffff"
-            android:background="#000000"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/password"
+        android:layout_marginTop="30dp"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:textColorHint="#ffffff"
+        android:textColor="#ffffff"/>
 
-        <Button
-            android:id="@+id/share"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:text="Share"
-            android:layout_margin="0px"
-            android:textColor="#ffffff"
-            android:background="#000000"
-            tools:layout_editor_absoluteX="154dp"
-            tools:layout_editor_absoluteY="323dp" />
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Login" />
 
-    </LinearLayout>
+
 </LinearLayout>

@@ -19,7 +19,7 @@ public class IOTActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent back = new Intent(IOTActivity.this, MainActivity.class);
+                Intent back = new Intent(IOTActivity.this, OptionActivity.class);
                 startActivity(back);
             }
         });
